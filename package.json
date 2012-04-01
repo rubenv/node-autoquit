@@ -1,0 +1,20 @@
+{
+    "name"          : "autoquit",
+    "version"       : "0.1.0",
+    "main"          : "./lib/autoquit.js",
+    "description"   : "Automatically shut down servers when inactive",
+    "keywords"      : ["autoquit", "server"],
+    "url"           : "http://github.com/rubenv/node-autoquit",
+    "repositories"  : [
+        {
+            "type" : "git",
+            "url"  : "git://github.com/rubenv/node-autoquit.git" 
+        } 
+    ],
+    "author"        : "Ruben Vermeersch <ruben@savanne.be>",
+    "contributors"  : [],
+    "licenses"      : ["MIT"],
+    "dependencies"  : [],
+    "engines"       : { "node": ">=0.4.0" }
+}
+
