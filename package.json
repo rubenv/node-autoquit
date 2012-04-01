@@ -1,6 +1,6 @@
 {
     "name"          : "autoquit",
-    "version"       : "0.1.1",
+    "version"       : "0.1.2",
     "main"          : "./lib/autoquit.js",
     "description"   : "Automatically shut down servers when inactive",
     "keywords"      : ["autoquit", "server"],
