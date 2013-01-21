@@ -4,6 +4,8 @@
   
   Designed to be used in combination with something like node-systemd: https://github.com/rubenv/node-systemd
 
+  More info on why you'd want to use this module: http://savanne.be/articles/deploying-node-js-with-systemd/
+
   Developed by Flow Pilots: http://www.flowpilots.com/
 
 ## Usage
