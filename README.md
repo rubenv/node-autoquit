@@ -44,13 +44,14 @@
 
 ## Specifying options
 
-  Autoquit currently has one option: specifying the idle timeout. You can pass options as an object to the `autoQuit` call:
+  You can pass options as an object to the `autoQuit` call:
   
     server.autoQuit({ timeOut: 900 });
     
   Accepted options:
   
   * `timeOut`: number of seconds of inactivity before triggering the shutdown method.    
+  * `exitFn`: A function that will be invoked when shutting down. If this is not supplied, the default action is to invoke `process.exit(0);`.
     
 ## License 
 

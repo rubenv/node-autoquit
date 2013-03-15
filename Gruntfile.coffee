@@ -6,13 +6,13 @@ module.exports = (grunt) ->
 
     @initConfig
         jshint:
-            all: ["lib/*.js"]
+            all: ["lib/*.js", "test/*.js"]
             options:
                 jshintrc: ".jshintrc"
 
         watch:
             all:
-                files: ['src/**.coffee', 'test/**.coffee']
+                files: ['lib/**.js', 'test/**', 'Gruntfile.coffee']
                 tasks: ['test']
 
         mochacli:
@@ -22,6 +22,8 @@ module.exports = (grunt) ->
             spec:
                 options:
                     reporter: 'spec'
+                    slow: 2000
+                    timeout: 10000
 
     @registerTask 'default', ['test']
     @registerTask 'build', ['jshint']
