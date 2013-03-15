@@ -1,20 +1,36 @@
 {
-    "name"          : "autoquit",
-    "version"       : "0.1.2",
-    "main"          : "./lib/autoquit.js",
-    "description"   : "Automatically shut down servers when inactive",
-    "keywords"      : ["autoquit", "server"],
-    "url"           : "http://github.com/rubenv/node-autoquit",
-    "repositories"  : [
-        {
-            "type" : "git",
-            "url"  : "git://github.com/rubenv/node-autoquit.git" 
-        } 
-    ],
-    "author"        : "Ruben Vermeersch <ruben@savanne.be>",
-    "contributors"  : [],
-    "licenses"      : ["MIT"],
-    "dependencies"  : [],
-    "engines"       : { "node": ">=0.4.0" }
+  "name": "autoquit",
+  "version": "0.1.2",
+  "main": "./lib/autoquit.js",
+  "description": "Automatically shut down servers when inactive",
+  "keywords": [
+    "autoquit",
+    "server"
+  ],
+  "url": "http://github.com/rubenv/node-autoquit",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git://github.com/rubenv/node-autoquit.git"
+    }
+  ],
+  "author": "Ruben Vermeersch <ruben@savanne.be>",
+  "contributors": [],
+  "licenses": [
+    "MIT"
+  ],
+  "dependencies": [],
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-coffee": "~0.6.0",
+    "grunt-release": "~0.3.1",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-mocha-cli": "~1.0.1",
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-jshint": "~0.3.0",
+    "coffee-script": "~1.6.1"
+  }
 }
-
