@@ -4,15 +4,9 @@ require('..'); // Require autoquit
 var sinon = require('sinon');
 var clock = sinon.useFakeTimers();
 
-process.on('message', function (msg) {
-    if (msg.clock) {
-        clock.tick(msg.clock * 1000);
-    }
-});
-
 // Take timeout from args, disconnect when done.
 var options = {
-    timeOut: process.argv[3] || 30,
+    timeOut: process.argv[3],
     exitFn: function () {
         process.disconnect();
     }
@@ -26,3 +20,13 @@ var server = http.createServer(function (req, res) {
 });
 server.autoQuit(options);
 server.listen(process.argv[2]);
+
+// Message handling
+process.on('message', function (msg) {
+    if (msg.clock) {
+        clock.tick(msg.clock * 1000);
+    }
+    if (msg.ping) {
+        process.send({ ping: true });
+    }
+});
