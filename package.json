@@ -36,6 +36,7 @@
     "grunt-contrib-jshint": "~0.3.0",
     "coffee-script": "~1.6.1",
     "sinon": "~1.6.0",
-    "async": "~0.2.6"
+    "async": "~0.2.6",
+    "express": "~3.2.0"
   }
 }

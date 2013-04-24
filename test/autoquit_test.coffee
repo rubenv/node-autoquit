@@ -6,11 +6,12 @@ child_process = require 'child_process'
 child = null
 running = false
 port = 0
+runner = null
 
 startChild = (timeout = 30) ->
     port = 15000 + Math.floor(Math.random() * 5000)
     running = true
-    child = child_process.fork 'test/runner.js', [port, timeout]
+    child = child_process.fork "test/#{runner}.js", [port, timeout]
     child.on 'disconnect', () -> running = false
 
 advanceClock = (seconds) ->
@@ -40,7 +41,7 @@ pokeServer = (cb) ->
         assert.equal(res.statusCode, 200)
         cb()
 
-describe "Autoquit", ->
+runTests = () ->
     it "Should quit after a certain amount of time", (done) ->
         startChild()
         assertRunning () ->
@@ -74,3 +75,9 @@ describe "Autoquit", ->
             assertRunning
             advanceClockAsync(2)
         ], assertExits(done)
+
+runner = 'runner'
+describe "Plain HTTP server", runTests
+
+runner = 'express-runner'
+describe "Express", runTests
