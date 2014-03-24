@@ -8,12 +8,10 @@
     "server"
   ],
   "url": "http://github.com/rubenv/node-autoquit",
-  "repositories": [
-    {
-      "type": "git",
-      "url": "git://github.com/rubenv/node-autoquit.git"
-    }
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rubenv/node-autoquit.git"
+  },
   "author": "Ruben Vermeersch <ruben@savanne.be>",
   "contributors": [],
   "licenses": [
