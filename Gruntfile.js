@@ -28,6 +28,11 @@ module.exports = function (grunt) {
                     timeout: 10000
                 }
             }
+        },
+        release: {
+            options: {
+                npm: false
+            }
         }
     });
 
