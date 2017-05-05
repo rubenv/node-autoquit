@@ -58,7 +58,12 @@ function assertExits(cb) {
 }
 
 function pokeServer(cb) {
-    http.get('http://localhost:' + port, function (res) {
+    var options = {
+        hostname: 'localhost',
+        port: port,
+        agent: false
+    };
+    http.get(options, function (res) {
         assert.equal(res.statusCode, 200);
         cb();
     });
