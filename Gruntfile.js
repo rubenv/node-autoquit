@@ -8,7 +8,8 @@ module.exports = function (grunt) {
         jshint: {
             all: ["lib/*.js", "test/*.js", "Gruntfile.js"],
             options: {
-                jshintrc: ".jshintrc"
+                jshintrc: ".jshintrc",
+                reporterOutput: "",
             }
         },
         watch: {
